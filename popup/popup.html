@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arena.ai Folders</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <header class="popup-header">
+      <h1>📁 Arena.ai Folders</h1>
+      <p class="subtitle">Organisez vos projets</p>
+    </header>
+
+    <div class="popup-content">
+      <!-- Création de dossier -->
+      <div class="create-section">
+        <input 
+          type="text" 
+          id="folderNameInput" 
+          placeholder="Nom du nouveau dossier..."
+          maxlength="50"
+        >
+        <button id="createFolderBtn" class="btn btn-primary">
+          ➕ Créer
+        </button>
+      </div>
+
+      <!-- Liste des dossiers -->
+      <div class="folders-list" id="foldersList">
+        <div class="loading">Chargement...</div>
+      </div>
+
+      <!-- Statistiques -->
+      <div class="stats" id="stats">
+        <div class="stat-item">
+          <span class="stat-label">Dossiers:</span>
+          <span class="stat-value" id="folderCount">0</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Projets:</span>
+          <span class="stat-value" id="projectCount">0</span>
+        </div>
+      </div>
+    </div>
+
+    <footer class="popup-footer">
+      <button id="refreshBtn" class="btn btn-secondary">🔄 Actualiser</button>
+      <button id="exportBtn" class="btn btn-secondary">💾 Exporter</button>
+    </footer>
+  </div>
+
+  <script src="../utils/storage.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

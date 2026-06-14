@@ -1,0 +1,571 @@
+/* Variables CSS pour support du mode sombre */
+:root {
+  --arena-folder-bg: #ffffff;
+  --arena-folder-bg-hover: #f5f5f5;
+  --arena-folder-bg-active: #e5e5e5;
+  --arena-folder-border: #e5e5e5;
+  --arena-folder-text: #171717;
+  --arena-folder-text-secondary: #737373;
+  --arena-folder-accent: #525252;
+  --arena-folder-accent-hover: #404040;
+  --arena-primary-btn: #2563eb;
+  --arena-primary-btn-hover: #1d4ed8;
+  --arena-folder-shadow: rgba(0, 0, 0, 0.08);
+  --arena-folder-danger: #ef4444;
+  --arena-folder-success: #10b981;
+  --arena-project-icon-color: #525252;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --arena-folder-bg: #171717;
+    --arena-folder-bg-hover: #262626;
+    --arena-folder-bg-active: #333333;
+    --arena-folder-border: #333333;
+    --arena-folder-text: #ededed;
+    --arena-folder-text-secondary: #a3a3a3;
+    --arena-folder-accent: #d4d4d4;
+    --arena-folder-accent-hover: #ffffff;
+    --arena-primary-btn: #3b82f6;
+    --arena-primary-btn-hover: #60a5fa;
+    --arena-folder-shadow: rgba(0, 0, 0, 0.3);
+    --arena-folder-danger: #f87171;
+    --arena-folder-success: #34d399;
+    --arena-project-icon-color: #d4d4d4;
+  }
+}
+
+/* Bouton "Nouveau dossier" intégré dans la sidebar */
+.arena-new-folder-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px 12px;
+  margin: 12px 0;
+  background: transparent;
+  border: 1px dashed var(--arena-folder-border);
+  border-radius: 12px;
+  color: var(--arena-folder-text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.arena-new-folder-btn:hover {
+  background: var(--arena-folder-bg-hover);
+  color: var(--arena-folder-text);
+  border-color: var(--arena-folder-text-secondary);
+  transform: translateY(-1px);
+}
+
+.arena-new-folder-btn .icon {
+  font-size: 16px;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.arena-new-folder-btn:hover .icon {
+  transform: scale(1.1);
+}
+
+/* Section de dossier dans la sidebar */
+.arena-folder-section {
+  margin: 4px 0;
+}
+
+/* En-tête de dossier */
+.arena-folder-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  margin: 4px 0;
+  background: transparent;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  user-select: none;
+}
+
+.arena-folder-header:hover {
+  background: var(--arena-folder-bg-hover);
+}
+
+.arena-folder-header.active {
+  background: var(--arena-folder-bg-active);
+  color: var(--arena-folder-text);
+}
+
+.arena-folder-header .expand-icon {
+  font-size: 12px;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--arena-folder-text-secondary);
+  min-width: 16px;
+  text-align: center;
+}
+
+.arena-folder-header.active .expand-icon {
+  color: white;
+}
+
+.arena-folder-header.collapsed .expand-icon {
+  transform: rotate(-90deg);
+}
+
+.arena-folder-header .folder-icon {
+  font-size: 16px;
+  color: var(--arena-project-icon-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arena-folder-header .folder-name {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--arena-folder-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.arena-folder-header .folder-count {
+  font-size: 12px;
+  padding: 2px 6px;
+  background: var(--arena-folder-border);
+  border-radius: 10px;
+  color: var(--arena-folder-text-secondary);
+  min-width: 20px;
+  text-align: center;
+}
+
+.arena-folder-header.active .folder-count {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.arena-folder-header .folder-actions {
+  display: flex;
+  gap: 4px;
+  opacity: 0;
+  transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--arena-folder-text-secondary);
+}
+
+.arena-folder-header:hover .folder-actions {
+  opacity: 1;
+}
+
+.arena-folder-header .folder-action-btn {
+  padding: 4px;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--arena-folder-text-secondary);
+}
+
+.arena-folder-header .folder-action-btn:hover {
+  background: var(--arena-folder-bg-active);
+  color: var(--arena-folder-text);
+  transform: scale(1.1);
+}
+
+/* Liste des conversations dans un dossier */
+.arena-folder-conversations {
+  margin-left: 24px;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.arena-folder-conversations.collapsed {
+  max-height: 0 !important;
+  opacity: 0;
+}
+
+/* Item de conversation amélioré */
+.arena-conversation-item {
+  position: relative;
+}
+
+.arena-conversation-item .move-to-folder-btn {
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  transform: translateY(-50%) scale(0.9);
+  padding: 6px;
+  background: var(--arena-folder-bg);
+  border: none;
+  border-radius: 8px;
+  color: var(--arena-folder-text-secondary);
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+/* L'icône n'apparaît que lorsque la souris est exactement sur elle */
+.arena-conversation-item .move-to-folder-btn:hover {
+  opacity: 1;
+  background: var(--arena-folder-bg-hover);
+  color: var(--arena-folder-text);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 4px 12px var(--arena-folder-shadow);
+}
+
+/* Menu contextuel de déplacement */
+.arena-move-menu {
+  background: var(--arena-folder-bg);
+  border: 1px solid var(--arena-folder-border);
+  border-radius: 12px;
+  padding: 6px;
+  box-shadow: 0 12px 32px var(--arena-folder-shadow);
+  min-width: 200px;
+  max-height: 320px;
+  overflow-y: auto;
+  z-index: 1000;
+  animation: menuSlideIn 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes menuSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.arena-move-menu-header {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--arena-folder-border);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--arena-folder-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.arena-move-menu-item {
+  padding: 8px 12px;
+  margin-bottom: 2px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 13px;
+  color: var(--arena-folder-text);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.arena-move-menu-item:hover {
+  background: var(--arena-folder-bg-hover);
+  transform: translateX(4px);
+}
+
+.arena-move-menu-item.active {
+  background: var(--arena-folder-bg-active);
+  color: var(--arena-folder-accent);
+  font-weight: 500;
+}
+
+.arena-move-menu-item .item-icon {
+  font-size: 14px;
+  color: var(--arena-folder-text-secondary);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.arena-move-menu-item:hover .item-icon {
+  color: var(--arena-folder-accent);
+  transform: scale(1.1);
+}
+
+.arena-move-menu-divider {
+  height: 1px;
+  background: var(--arena-folder-border);
+  margin: 4px 0;
+}
+
+.arena-move-menu-footer {
+  padding: 8px;
+  border-top: 1px solid var(--arena-folder-border);
+}
+
+.arena-create-folder-inline {
+  display: flex;
+  gap: 6px;
+  padding: 6px 8px;
+}
+
+.arena-create-folder-inline input {
+  flex: 1;
+  padding: 6px 8px;
+  border: 1px solid var(--arena-folder-border);
+  border-radius: 4px;
+  font-size: 12px;
+  background: var(--arena-folder-bg);
+  color: var(--arena-folder-text);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.arena-create-folder-inline input:focus {
+  outline: none;
+  border-color: var(--arena-folder-accent);
+}
+
+.arena-create-folder-inline button {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.arena-create-folder-inline .create-btn {
+  background: var(--arena-primary-btn);
+  color: white;
+}
+
+.arena-create-folder-inline .create-btn:hover {
+  background: var(--arena-primary-btn-hover);
+  transform: scale(1.05);
+}
+
+.arena-create-folder-inline .cancel-btn {
+  background: transparent;
+  color: var(--arena-folder-text-secondary);
+}
+
+.arena-create-folder-inline .cancel-btn:hover {
+  background: var(--arena-folder-bg-active);
+  color: var(--arena-folder-text);
+}
+
+/* Drag & Drop */
+.arena-conversation-item.dragging {
+  opacity: 0.5;
+}
+
+.arena-folder-header.drag-over {
+  background: var(--arena-folder-accent) !important;
+  color: white !important;
+  box-shadow: 0 0 0 2px var(--arena-folder-accent);
+}
+
+.arena-folder-header.drag-over .folder-name,
+.arena-folder-header.drag-over .expand-icon,
+.arena-folder-header.drag-over .folder-count {
+  color: white !important;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Section "Sans dossier" */
+.arena-unfiled-section {
+  margin-top: 8px;
+}
+
+.arena-unfiled-header {
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--arena-folder-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Modal de création/édition de dossier */
+.arena-folder-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  animation: fadeIn 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.arena-folder-modal {
+  background: var(--arena-folder-bg);
+  border: 1px solid var(--arena-folder-border);
+  border-radius: 16px;
+  padding: 24px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 24px 48px var(--arena-folder-shadow);
+  animation: modalSlideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes modalSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes modalSlideDown {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(10px) scale(0.95);
+  }
+}
+
+.arena-folder-modal h3 {
+  margin: 0 0 16px 0;
+  font-size: 18px;
+  color: var(--arena-folder-text);
+}
+
+.arena-folder-modal input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--arena-folder-border);
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 16px;
+  background: transparent;
+  color: var(--arena-folder-text);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.arena-folder-modal input:focus {
+  outline: none;
+  background: transparent;
+  border-color: var(--arena-folder-text-secondary);
+  box-shadow: 0 0 0 1px var(--arena-folder-text-secondary);
+}
+
+.arena-folder-modal-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.arena-folder-modal-actions button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.arena-folder-modal-actions button:hover {
+  transform: translateY(-1px);
+}
+
+.arena-folder-modal-actions button:active {
+  transform: translateY(1px);
+}
+
+.arena-folder-modal-actions .primary {
+  background: var(--arena-primary-btn);
+  color: white;
+}
+
+.arena-folder-modal-actions .primary:hover {
+  background: var(--arena-primary-btn-hover);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.arena-folder-modal-actions .secondary {
+  background: transparent;
+  color: var(--arena-folder-text-secondary);
+  border: 1px solid var(--arena-folder-border);
+}
+
+.arena-folder-modal-actions .secondary:hover {
+  background: var(--arena-folder-bg-hover);
+  color: var(--arena-folder-text);
+  border-color: var(--arena-folder-text-secondary);
+}
+
+.arena-folder-modal-actions .danger {
+  background: var(--arena-folder-danger);
+  color: white;
+}
+
+.arena-folder-modal-actions .danger:hover {
+  background: #dc2626; /* Darker red */
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
+
+.arena-modal-text {
+  font-size: 14px;
+  color: var(--arena-folder-text);
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.arena-modal-subtext {
+  font-size: 13px;
+  color: var(--arena-folder-text-secondary);
+  margin-bottom: 16px;
+}
+
+/* Scrollbar personnalisée pour le menu */
+.arena-move-menu::-webkit-scrollbar {
+  width: 6px;
+}
+
+.arena-move-menu::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.arena-move-menu::-webkit-scrollbar-thumb {
+  background: var(--arena-folder-border);
+  border-radius: 3px;
+}
+
+.arena-move-menu::-webkit-scrollbar-thumb:hover {
+  background: var(--arena-folder-text-secondary);
+}
+
+/* Animation de succès */
+@keyframes successPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.arena-folder-header.just-updated {
+  animation: successPulse 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
