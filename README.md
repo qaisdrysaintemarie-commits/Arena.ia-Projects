@@ -70,7 +70,7 @@ The colour palette is defined in `content/content.css` under `:root`. Example:
 ```
 Edit any variable to your preferred colour (use HEX, HSL or CSS colour names). The variables are also re‑declared inside the `@media (prefers-color-scheme: dark)` block for dark‑mode support – adjust those as well if you want a custom dark theme.
 
-After saving the CSS file, reload **chat.arena.ai**; the new colours appear instantly.
+After saving the CSS file, reload **Arena.ai**; the new colours appear instantly.
 
 ---
 
