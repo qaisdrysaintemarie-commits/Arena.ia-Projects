@@ -3,16 +3,16 @@
 ## What it does / Description
 
 **English** 🇬🇧
-Arena.ai Projects, created by Qaïs (me), adds real project management to **chat.arena.ai**. You can drag‑and‑drop conversations into custom *Projects*, enjoy a clean premium UI and ultra‑smooth animations. The extension runs entirely locally, is secure, open‑source, and works on any Chromium‑based browser (Chrome, Edge, Brave, Opera, Vivaldi).
+Arena.ai Projects, created by Qaïs (me), adds real project management to **Arena.ai**. You can drag‑and‑drop conversations into custom *Projects*, enjoy a clean premium UI and ultra‑smooth animations. The extension runs entirely locally, is secure, open‑source, and works on any Chromium‑based browser (Chrome, Edge, Brave, Opera, Vivaldi).
 
 **Français** 🇫🇷
-Arena.ai Projects, développé par Qaïs (moi), ajoute une vraie gestion de projets à **chat.arena.ai**. Vous pouvez glisser‑déposer les conversations dans des *Projets* personnalisés, profiter d’une interface épurée et d’animations ultra‑fluides. L’extension fonctionne 100 % en local, est sécurisée, open‑source et compatible avec tous les navigateurs Chromium (Chrome, Edge, Brave, Opera, Vivaldi).
+Arena.ai Projects, développé par Qaïs (moi), ajoute une vraie gestion de projets à **Arena.ai**. Vous pouvez glisser‑déposer les conversations dans des *Projets* personnalisés, profiter d’une interface épurée et d’animations ultra‑fluides. L’extension fonctionne 100 % en local, est sécurisée, open‑source et compatible avec tous les navigateurs Chromium (Chrome, Edge, Brave, Opera, Vivaldi).
 
 **Deutsch** 🇩🇪
-Arena.ai Projects, von Qaïs (mir) gebaut, verleiht Ihnen die Möglichkeit, Chats auf **chat.arena.ai** in eigene *Projekte* zu sortieren. Ziehen Sie Unterhaltungen per Drag‑and‑Drop, genießen Sie ein minimalistisches UI und superflüssige Animationen. Die Erweiterung ist komplett lokal, sicher, open‑source und läuft auf allen Chromium‑Browsern (Chrome, Edge, Brave, Opera, Vivaldi).
+Arena.ai Projects, von Qaïs (mir) gebaut, verleiht Ihnen die Möglichkeit, Chats auf **Arena.ai** in eigene *Projekte* zu sortieren. Ziehen Sie Unterhaltungen per Drag‑and‑Drop, genießen Sie ein minimalistisches UI und superflüssige Animationen. Die Erweiterung ist komplett lokal, sicher, open‑source und läuft auf allen Chromium‑Browsern (Chrome, Edge, Brave, Opera, Vivaldi).
 
 **Español** 🇪🇸
-Arena.ai Projects, creado por Qaïs (mí), le permite organizar sus conversaciones en **chat.arena.ai** en *Proyectos* personalizados. Arrastre y suelte los chats, disfrute de una interfaz limpia y animaciones muy fluidas. La extensión es 100 % local, segura, de código abierto y funciona en cualquier navegador Chromium (Chrome, Edge, Brave, Opera, Vivaldi).
+Arena.ai Projects, creado por Qaïs (mí), le permite organizar sus conversaciones en **Arena.ai** en *Proyectos* personalizados. Arrastre y suelte los chats, disfrute de una interfaz limpia y animaciones muy fluidas. La extensión es 100 % local, segura, de código abierto y funciona en cualquier navegador Chromium (Chrome, Edge, Brave, Opera, Vivaldi).
 
 ---
 
