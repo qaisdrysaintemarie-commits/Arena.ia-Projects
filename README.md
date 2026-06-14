@@ -3,7 +3,7 @@
 ## What it does / Description
 
 **English** 🇬🇧
-Arena.ai Projects, created by Qaïs (me), adds real project management to **Arena.ai**. You can drag‑and‑drop conversations into custom *Projects*, enjoy a clean premium UI and ultra‑smooth animations. The extension runs entirely locally, is secure, open‑source, and works on any Chromium‑based browser (Chrome, Edge, Brave, Opera, Vivaldi).
+Arena.ai Projects, created by Qaïs (me), adds real project management to **Arena.ai**. You can drag‑and‑drop conversations into custom *Projects*, enjoy a clean UI and ultra‑smooth animations. The extension runs entirely locally, is secure, open‑source, and works on any Chromium‑based browser (Chrome, Edge, Brave, Opera, Vivaldi).
 
 **Français** 🇫🇷
 Arena.ai Projects, développé par Qaïs (moi), ajoute une vraie gestion de projets à **Arena.ai**. Vous pouvez glisser‑déposer les conversations dans des *Projets* personnalisés, profiter d’une interface épurée et d’animations ultra‑fluides. L’extension fonctionne 100 % en local, est sécurisée, open‑source et compatible avec tous les navigateurs Chromium (Chrome, Edge, Brave, Opera, Vivaldi).
