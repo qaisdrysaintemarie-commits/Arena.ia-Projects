@@ -21,7 +21,7 @@ Arena.ai Projects, creado por Qaïs (mí), le permite organizar sus conversacion
 1. **Download** the ZIP file from the repository or the Chrome Web Store.
 2. Open `chrome://extensions/` (or `edge://extensions/` for Edge).
 3. Enable **Developer mode** (toggle in the top‑right corner).
-4. Click **Load unpacked** and select the folder `arena-folders` containing `manifest.json`.
+4. Click **Load unpacked** and select the folder `Arena.ia-Projects-main` containing `manifest.json`.
 5. The extension icon will appear next to the address bar. Click it while on **Arena.ai** to see the new UI.
 
 *If you install from the Chrome Web Store, the steps are the same – just click **Add to Chrome** and the extension will be ready.*
